@@ -10,6 +10,8 @@ import CoreData
 
 class NotebookTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBarNotebook: UISearchBar!
+    
     var dataController: DataController?
     var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult>?
     
@@ -18,7 +20,7 @@ class NotebookTableViewController: UITableViewController {
         self.dataController = dataController
     }
     
-    func initializeFetchResultsController() {
+    func initializeFetchResultsController(title: String?) {
         guard let dataController = dataController else { return }
         let viewContext = dataController.viewContext
         
@@ -28,10 +30,14 @@ class NotebookTableViewController: UITableViewController {
                                                            ascending: true)
         request.sortDescriptors = [notebookTitleSortDescriptor]
         
+        if let title = title {
+                    request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", title)
+                }
+        
         self.fetchResultsController = NSFetchedResultsController(fetchRequest: request,
-                                                                managedObjectContext: viewContext,
-                                                                sectionNameKeyPath: nil,
-                                                                cacheName: nil)
+                                                                 managedObjectContext: viewContext,
+                                                                 sectionNameKeyPath: nil,
+                                                                 cacheName: nil)
         self.fetchResultsController?.delegate = self
         
         do {
@@ -51,14 +57,15 @@ class NotebookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBarNotebook.delegate = self
         
-        initializeFetchResultsController()
-       
+        initializeFetchResultsController(title: nil)
+        
         let loadDataBarbuttonItem = UIBarButtonItem(title: "Load",
                                                     style: .done,
                                                     target: self,
                                                     action: #selector(loadData))
-            
+        
         let deleteBarButtonItem = UIBarButtonItem(title: "Delete",
                                                   style: .done,
                                                   target: self,
@@ -72,7 +79,7 @@ class NotebookTableViewController: UITableViewController {
         dataController?.save()
         dataController?.delete()
         dataController?.reset()
-        initializeFetchResultsController()
+        initializeFetchResultsController(title: nil)
         tableView.reloadData()
     }
     
@@ -135,17 +142,17 @@ class NotebookTableViewController: UITableViewController {
     }
 }
 
-    // MARK:- FetchResultsControllerDelegate
-    extension NotebookTableViewController: NSFetchedResultsControllerDelegate {
-        
-        // will change
-        func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            tableView.beginUpdates()
-        }
-        
-        // did change a section
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-            switch type {
+// MARK:- FetchResultsControllerDelegate
+extension NotebookTableViewController: NSFetchedResultsControllerDelegate {
+    
+    // will change
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    // did change a section
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
             case .insert:
                 tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
             case .delete:
@@ -153,28 +160,44 @@ class NotebookTableViewController: UITableViewController {
             case .move, .update:
                 break
             @unknown default: fatalError()
-            }
-        }
-        
-        // did change an object
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-            switch type {
-                case .insert:
-                    tableView.insertRows(at: [newIndexPath!], with: .fade)
-                case .delete:
-                    tableView.deleteRows(at: [indexPath!], with: .fade)
-                case .update:
-                    tableView.reloadRows(at: [indexPath!], with: .fade)
-                case .move:
-                    tableView.moveRow(at: indexPath!, to: newIndexPath!)
-                @unknown default:
-                    fatalError()
-            }
-        }
-        
-        // did change content
-        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            tableView.endUpdates()
         }
     }
+    
+    // did change an object
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+            case .insert:
+                tableView.insertRows(at: [newIndexPath!], with: .fade)
+            case .delete:
+                tableView.deleteRows(at: [indexPath!], with: .fade)
+            case .update:
+                tableView.reloadRows(at: [indexPath!], with: .fade)
+            case .move:
+                tableView.moveRow(at: indexPath!, to: newIndexPath!)
+            @unknown default:
+                fatalError()
+        }
+    }
+    
+    // did change content
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+}
+
+extension NotebookTableViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty{
+            self.initializeFetchResultsController(title: searchText)
+            tableView.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        //            self.setupSearchBarShow(isShowing: false)
+        //            self.viewModel.viewWasLoad()
+        //            self.tablewView.reloadData()
+    }
+}
 

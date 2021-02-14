@@ -71,6 +71,7 @@ class NoteTableViewController: UITableViewController, UIImagePickerControllerDel
         initializeFetchResultsController()
         searchBar.delegate = self
         setupNavigationItem()
+        
     }
     
     func setupNavigationItem() {
@@ -144,7 +145,6 @@ class NoteTableViewController: UITableViewController, UIImagePickerControllerDel
         return cell
     }
     
-    
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
     }
@@ -159,7 +159,7 @@ class NoteTableViewController: UITableViewController, UIImagePickerControllerDel
         let notesCreatedAtSortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [notesCreatedAtSortDescriptor]
         
-        fetchRequest.predicate = NSPredicate(format: "title CONTAINS %@", predicate, notebook)
+        fetchRequest.predicate = NSPredicate(format: "(title CONTAINS[cd] %@) AND (notebook == %@)", predicate, notebook)
         
         let managedObjectContext = dataController.viewContext
         fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -183,6 +183,7 @@ extension NoteTableViewController: NSFetchedResultsControllerDelegate {
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
+        print("controllerWillChangeContent")
     }
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
@@ -194,6 +195,7 @@ extension NoteTableViewController: NSFetchedResultsControllerDelegate {
             break
         @unknown default: fatalError()
         }
+        print("didChange sectionInfo")
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
@@ -209,10 +211,12 @@ extension NoteTableViewController: NSFetchedResultsControllerDelegate {
             @unknown default:
                 fatalError()
         }
+        print("didChange anObject")
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+        print("controllerDidChangeContent")
     }
 }
 
@@ -231,6 +235,7 @@ extension NoteTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty{
           self.filterForSearchText(predicate: searchText)
+            tableView.reloadData()
                 }
     }
     

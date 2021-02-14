@@ -142,17 +142,17 @@ extension DataController {
             
             NoteMO.createNote(managedObjectContext: managedObjectContext,
                               notebook: notebook,
-                              title: "rodrigo",
+                              title: "nota 1",
                               createdAt: Date())
             
             NoteMO.createNote(managedObjectContext: managedObjectContext,
                               notebook: notebook,
-                              title: "alejandro",
+                              title: "nota 2",
                               createdAt: Date())
             
             NoteMO.createNote(managedObjectContext: managedObjectContext,
                               notebook: notebook,
-                              title: "suputamadre",
+                              title: "nota 3",
                               createdAt: Date())
             
             let notebookImage = UIImage(named: "notebookImage")

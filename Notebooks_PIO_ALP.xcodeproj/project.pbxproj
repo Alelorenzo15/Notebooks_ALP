@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C34A74325CECBFA00B8DA68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A74225CECBFA00B8DA68 /* AppDelegate.swift */; };
+		4C34A74525CECBFA00B8DA68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A74425CECBFA00B8DA68 /* SceneDelegate.swift */; };
+		4C34A74725CECBFA00B8DA68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A74625CECBFA00B8DA68 /* ViewController.swift */; };
+		4C34A74A25CECBFA00B8DA68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C34A74825CECBFA00B8DA68 /* Main.storyboard */; };
+		4C34A74D25CECBFA00B8DA68 /* Notebooks_PIO_ALPModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A74B25CECBFA00B8DA68 /* Notebooks_PIO_ALPModel.xcdatamodeld */; };
+		4C34A74F25CECBFB00B8DA68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C34A74E25CECBFB00B8DA68 /* Assets.xcassets */; };
+		4C34A75225CECBFB00B8DA68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C34A75025CECBFB00B8DA68 /* LaunchScreen.storyboard */; };
+		4C34A75B25CECC3100B8DA68 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A75A25CECC3100B8DA68 /* DataController.swift */; };
+		4C34A77225D1CBDE00B8DA68 /* NotebookMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34A77125D1CBDE00B8DA68 /* NotebookMO.swift */; };
+		4CC8E3F225D4935200EE2BA4 /* NoteMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E3F025D4935200EE2BA4 /* NoteMO+CoreDataClass.swift */; };
+		4CC8E3F925D5AA4E00EE2BA4 /* NotebookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E3F825D5AA4E00EE2BA4 /* NotebookTableViewController.swift */; };
+		4CC8E40325D6EAFB00EE2BA4 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E40225D6EAFB00EE2BA4 /* NoteTableViewController.swift */; };
+		4CC8E40925D853FE00EE2BA4 /* HelperDateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E40825D853FE00EE2BA4 /* HelperDateFormater.swift */; };
+		4CC8E42525D92BD800EE2BA4 /* PhotographMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E42325D92BD800EE2BA4 /* PhotographMO+CoreDataClass.swift */; };
+		4CC8E43A25D9758B00EE2BA4 /* DownSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E43925D9758B00EE2BA4 /* DownSampler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C34A76625CECC9D00B8DA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C34A73725CECBFA00B8DA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C34A73E25CECBFA00B8DA68;
+			remoteInfo = Notebooks_PIO_ALP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C34A73F25CECBFA00B8DA68 /* Notebooks_PIO_ALP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notebooks_PIO_ALP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C34A74225CECBFA00B8DA68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C34A74425CECBFA00B8DA68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4C34A74625CECBFA00B8DA68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C34A74925CECBFA00B8DA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C34A74C25CECBFA00B8DA68 /* Notebooks_PIO_ALP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notebooks_PIO_ALP.xcdatamodel; sourceTree = "<group>"; };
+		4C34A74E25CECBFB00B8DA68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C34A75125CECBFB00B8DA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C34A75325CECBFB00B8DA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C34A75A25CECC3100B8DA68 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4C34A76125CECC9D00B8DA68 /* Notebooks_PIO_ALPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Notebooks_PIO_ALPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C34A77125D1CBDE00B8DA68 /* NotebookMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookMO.swift; sourceTree = "<group>"; };
+		4CC8E3F025D4935200EE2BA4 /* NoteMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4CC8E3F825D5AA4E00EE2BA4 /* NotebookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookTableViewController.swift; sourceTree = "<group>"; };
+		4CC8E40225D6EAFB00EE2BA4 /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
+		4CC8E40825D853FE00EE2BA4 /* HelperDateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperDateFormater.swift; sourceTree = "<group>"; };
+		4CC8E42325D92BD800EE2BA4 /* PhotographMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotographMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4CC8E43925D9758B00EE2BA4 /* DownSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownSampler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C34A73C25CECBFA00B8DA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C34A75E25CECC9D00B8DA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C34A73625CECBFA00B8DA68 = {
+			isa = PBXGroup;
+			children = (
+				4C34A74125CECBFA00B8DA68 /* Notebooks_PIO_ALP */,
+				4C34A74025CECBFA00B8DA68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C34A74025CECBFA00B8DA68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C34A73F25CECBFA00B8DA68 /* Notebooks_PIO_ALP.app */,
+				4C34A76125CECC9D00B8DA68 /* Notebooks_PIO_ALPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C34A74125CECBFA00B8DA68 /* Notebooks_PIO_ALP */ = {
+			isa = PBXGroup;
+			children = (
+				4C34A74225CECBFA00B8DA68 /* AppDelegate.swift */,
+				4C34A74425CECBFA00B8DA68 /* SceneDelegate.swift */,
+				4C34A74625CECBFA00B8DA68 /* ViewController.swift */,
+				4C34A74825CECBFA00B8DA68 /* Main.storyboard */,
+				4C34A74E25CECBFB00B8DA68 /* Assets.xcassets */,
+				4C34A75025CECBFB00B8DA68 /* LaunchScreen.storyboard */,
+				4C34A75325CECBFB00B8DA68 /* Info.plist */,
+				4C34A74B25CECBFA00B8DA68 /* Notebooks_PIO_ALPModel.xcdatamodeld */,
+				4CC8E3F025D4935200EE2BA4 /* NoteMO+CoreDataClass.swift */,
+				4C34A75A25CECC3100B8DA68 /* DataController.swift */,
+				4C34A77125D1CBDE00B8DA68 /* NotebookMO.swift */,
+				4CC8E3F825D5AA4E00EE2BA4 /* NotebookTableViewController.swift */,
+				4CC8E42325D92BD800EE2BA4 /* PhotographMO+CoreDataClass.swift */,
+				4CC8E40225D6EAFB00EE2BA4 /* NoteTableViewController.swift */,
+				4CC8E40825D853FE00EE2BA4 /* HelperDateFormater.swift */,
+				4CC8E43925D9758B00EE2BA4 /* DownSampler.swift */,
+			);
+			path = Notebooks_PIO_ALP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C34A73E25CECBFA00B8DA68 /* Notebooks_PIO_ALP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C34A75625CECBFB00B8DA68 /* Build configuration list for PBXNativeTarget "Notebooks_PIO_ALP" */;
+			buildPhases = (
+				4C34A73B25CECBFA00B8DA68 /* Sources */,
+				4C34A73C25CECBFA00B8DA68 /* Frameworks */,
+				4C34A73D25CECBFA00B8DA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notebooks_PIO_ALP;
+			productName = Notebooks_PIO_ALP;
+			productReference = 4C34A73F25CECBFA00B8DA68 /* Notebooks_PIO_ALP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C34A76025CECC9D00B8DA68 /* Notebooks_PIO_ALPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C34A76825CECC9D00B8DA68 /* Build configuration list for PBXNativeTarget "Notebooks_PIO_ALPTests" */;
+			buildPhases = (
+				4C34A75D25CECC9D00B8DA68 /* Sources */,
+				4C34A75E25CECC9D00B8DA68 /* Frameworks */,
+				4C34A75F25CECC9D00B8DA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C34A76725CECC9D00B8DA68 /* PBXTargetDependency */,
+			);
+			name = Notebooks_PIO_ALPTests;
+			productName = Notebooks_PIO_ALPTests;
+			productReference = 4C34A76125CECC9D00B8DA68 /* Notebooks_PIO_ALPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C34A73725CECBFA00B8DA68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4C34A73E25CECBFA00B8DA68 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4C34A76025CECC9D00B8DA68 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4C34A73E25CECBFA00B8DA68;
+					};
+				};
+			};
+			buildConfigurationList = 4C34A73A25CECBFA00B8DA68 /* Build configuration list for PBXProject "Notebooks_PIO_ALP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C34A73625CECBFA00B8DA68;
+			productRefGroup = 4C34A74025CECBFA00B8DA68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C34A73E25CECBFA00B8DA68 /* Notebooks_PIO_ALP */,
+				4C34A76025CECC9D00B8DA68 /* Notebooks_PIO_ALPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C34A73D25CECBFA00B8DA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C34A75225CECBFB00B8DA68 /* LaunchScreen.storyboard in Resources */,
+				4C34A74F25CECBFB00B8DA68 /* Assets.xcassets in Resources */,
+				4C34A74A25CECBFA00B8DA68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C34A75F25CECC9D00B8DA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C34A73B25CECBFA00B8DA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC8E43A25D9758B00EE2BA4 /* DownSampler.swift in Sources */,
+				4C34A75B25CECC3100B8DA68 /* DataController.swift in Sources */,
+				4C34A74725CECBFA00B8DA68 /* ViewController.swift in Sources */,
+				4C34A77225D1CBDE00B8DA68 /* NotebookMO.swift in Sources */,
+				4CC8E42525D92BD800EE2BA4 /* PhotographMO+CoreDataClass.swift in Sources */,
+				4CC8E40325D6EAFB00EE2BA4 /* NoteTableViewController.swift in Sources */,
+				4C34A74D25CECBFA00B8DA68 /* Notebooks_PIO_ALPModel.xcdatamodeld in Sources */,
+				4CC8E40925D853FE00EE2BA4 /* HelperDateFormater.swift in Sources */,
+				4CC8E3F925D5AA4E00EE2BA4 /* NotebookTableViewController.swift in Sources */,
+				4C34A74325CECBFA00B8DA68 /* AppDelegate.swift in Sources */,
+				4CC8E3F225D4935200EE2BA4 /* NoteMO+CoreDataClass.swift in Sources */,
+				4C34A74525CECBFA00B8DA68 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C34A75D25CECC9D00B8DA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C34A76725CECC9D00B8DA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C34A73E25CECBFA00B8DA68 /* Notebooks_PIO_ALP */;
+			targetProxy = 4C34A76625CECC9D00B8DA68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C34A74825CECBFA00B8DA68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C34A74925CECBFA00B8DA68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C34A75025CECBFB00B8DA68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C34A75125CECBFB00B8DA68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C34A75425CECBFB00B8DA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C34A75525CECBFB00B8DA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C34A75725CECBFB00B8DA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Notebooks_PIO_ALP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepcoding..Notebooks-PIO-ALP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C34A75825CECBFB00B8DA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Notebooks_PIO_ALP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepcoding..Notebooks-PIO-ALP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C34A76925CECC9D00B8DA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Notebooks_PIO_ALPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepcoding..Notebooks-PIO-ALPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notebooks_PIO_ALP.app/Notebooks_PIO_ALP";
+			};
+			name = Debug;
+		};
+		4C34A76A25CECC9D00B8DA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Notebooks_PIO_ALPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepcoding..Notebooks-PIO-ALPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notebooks_PIO_ALP.app/Notebooks_PIO_ALP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C34A73A25CECBFA00B8DA68 /* Build configuration list for PBXProject "Notebooks_PIO_ALP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C34A75425CECBFB00B8DA68 /* Debug */,
+				4C34A75525CECBFB00B8DA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C34A75625CECBFB00B8DA68 /* Build configuration list for PBXNativeTarget "Notebooks_PIO_ALP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C34A75725CECBFB00B8DA68 /* Debug */,
+				4C34A75825CECBFB00B8DA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C34A76825CECC9D00B8DA68 /* Build configuration list for PBXNativeTarget "Notebooks_PIO_ALPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C34A76925CECC9D00B8DA68 /* Debug */,
+				4C34A76A25CECC9D00B8DA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C34A74B25CECBFA00B8DA68 /* Notebooks_PIO_ALPModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C34A74C25CECBFA00B8DA68 /* Notebooks_PIO_ALP.xcdatamodel */,
+			);
+			currentVersion = 4C34A74C25CECBFA00B8DA68 /* Notebooks_PIO_ALP.xcdatamodel */;
+			path = Notebooks_PIO_ALPModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4C34A73725CECBFA00B8DA68 /* Project object */;
+}
